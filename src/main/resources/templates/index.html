@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电池预警</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        input {
+            display: block;
+            margin: auto;
+        }
+        form {
+            width: 50%;
+            margin: auto;
+        }
+        #result {
+            border: 1px solid #000;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h1>小米汽车电池预警系统</h1>
+<p>请依次输入</p>
+
+<!--导入js文件，js文件放置script中的内容，如要调用的函数-->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/myjs.js"></script>
+
+<form id="from1">
+    车架编号（必填）:<br>
+    <input type="text" id="carFrameId">
+    <br>
+    规则编号（选填）:<br>
+    <input type="text" id="ruleId">
+    <p>Mx，Mi 和 Ix，Ii 需成对输入</p>
+    最高电压 Mx:<br>
+    <input type="text" id="Mx">
+    <br>
+    最小电压 Mi:<br>
+    <input type="text" id="Mi">
+    <br>
+    最高电流 Ix:<br>
+    <input type="text" id="Ix">
+    <br>
+    最小电流 Ii:<br>
+    <input type="text" id="Ii">
+  <br/>
+  <button type="button" name="sub" onclick="but_look()">提交</button>
+
+</form>
+<div id="result">
+    <!-- 这里将显示结果 -->
+</div>
+</body>
+</html>
